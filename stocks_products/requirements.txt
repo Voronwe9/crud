@@ -1,0 +1,11 @@
+django
+djangorestframework
+psycopg2-binary
+asgiref
+django-filter
+gunicorn
+packaging
+python-dotenv
+pytz
+sqlparse
+typing_extensions
