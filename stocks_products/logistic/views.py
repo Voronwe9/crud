@@ -24,4 +24,4 @@ class StockViewSet(ModelViewSet):
 
 class TestView(APIView):
     def get(self, request):
-        return Response({"message": "Всем большой привет!"})
+        return Response({"message": "Тест 1: ручная проверка!"})
