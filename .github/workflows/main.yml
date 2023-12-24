@@ -64,9 +64,9 @@ jobs:
       - name: Развертывание
         uses: appleboy/ssh-action@master
         with: 
-          host: $ {{secrets.SSH_HOST}}
-          username: $ {{secrets.SSH_USER}}
-          password: $ {{secrets.SSH_PASSWORD}}
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.SSH_USER}}
+          password: ${{secrets.SSH_PASSWORD}}
           script: |
             expect /home/anton/crud/deploy.exp
 
