@@ -1,0 +1,17 @@
+asgiref
+certifi
+charset-normalizer
+Django
+django-filter
+djangorestframework
+gunicorn
+idna
+packaging
+psycopg2-binary
+python-dotenv
+pytz
+requests
+sqlparse
+typing_extensions
+urllib3
+flake8
