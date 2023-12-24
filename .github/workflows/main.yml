@@ -3,12 +3,13 @@ name: Автоматизация тестирования и развертыв�
 
 on:
   push:
-    branches: [ci]
+    branches:
+      - ci
 
 
 jobs:
   tests:
-    runs-on: ubuntu:22.04
+    runs-on: ubuntu-22.04
     env:
       SECRET: ${{secrets.DJANGO_SECRET}}
       DEBUG: ${{secrets.DEBUG}}    
@@ -27,7 +28,7 @@ jobs:
           POSTGRES_USER: ${{env.DB_USER}}
           POSTGRES_PASSWORD: ${{env.DB_PASSWORD}}
         ports:
-          -5432:5432
+          - 5432:5432
         options:
           --health-cmd pg_isready
           --health-interval 5s
