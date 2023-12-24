@@ -61,3 +61,13 @@ jobs:
           DB_HOST: ${{env.DB_HOST}}      
           DB_ENGINE: ${{env.DB_ENGIN}}      
           ALLOWED_HOSTS: ${{env.ALLOWED}}  
+      - name: Развертывание
+        uses: appleboy/ssh-action@main
+        with: 
+          host: $ {{secrets.SSH_HOST}}
+          username: $ {{secrets.SSH_USER}}
+          password: $ {{secrets.SSH_PASSWORD}}
+          script: |
+            expect /home/anton/crud/deploy.exp
+
+
